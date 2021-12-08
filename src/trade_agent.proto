@@ -5,11 +5,11 @@ package trade_agent_protobuf;
 option go_package = "pkg/sinopacapi";
 
 message RealTimeTickResponse {
-    string exchange   = 1;
-    RealTimeTick tick = 2;
+    string exchange          = 1;
+    RealTimeTickMessage tick = 2;
 }
 
-message RealTimeTick {
+message RealTimeTickMessage {
     string code              = 1;
     string date_time         = 2;
     double open              = 3;
@@ -34,10 +34,10 @@ message RealTimeTick {
 }
 
 message HistoryTickResponse {
-    repeated HistoryTick data = 1;
+    repeated HistoryTickMessage data = 1;
 }
 
-message HistoryTick {
+message HistoryTickMessage {
     int64 ts         = 1;
     double close     = 2;
     int64 volume     = 3;
@@ -49,11 +49,11 @@ message HistoryTick {
 }
 
 message BidAskResponse {
-    string exchange = 1;
-    BidAsk bid_ask  = 2;
+    string exchange       = 1;
+    BidAskMessage bid_ask = 2;
 }
 
-message BidAsk {
+message BidAskMessage {
     string code                 = 1;
     string date_time            = 2;
     repeated double bid_price   = 3;
@@ -67,10 +67,10 @@ message BidAsk {
 }
 
 message KbarResponse {
-    repeated Kbar data = 1;
+    repeated KbarMessage data = 1;
 }
 
-message Kbar {
+message KbarMessage {
     int64 ts     = 1;
     double Close = 2;
     double Open  = 3;
@@ -80,10 +80,10 @@ message Kbar {
 }
 
 message SnapshotResponse {
-    repeated Snapshot data = 1;
+    repeated SnapshotMessage data = 1;
 }
 
-message Snapshot {
+message SnapshotMessage {
     int64 ts                = 1;
     string code             = 2;
     string exchange         = 3;
@@ -116,10 +116,10 @@ message EventResponse {
 }
 
 message TradeRecordResponse {
-    repeated TradeRecord data = 1;
+    repeated TradeRecordMessage data = 1;
 }
 
-message TradeRecord {
+message TradeRecordMessage {
     int64 quantity    = 1;
     double price      = 2;
     string action     = 3;
@@ -130,10 +130,10 @@ message TradeRecord {
 }
 
 message VolumeRankResponse {
-    repeated VolumeRank data = 1;
+    repeated VolumeRankMessage data = 1;
 }
 
-message VolumeRank {
+message VolumeRankMessage {
     string date            = 1;
     string code            = 2;
     string name            = 3;
