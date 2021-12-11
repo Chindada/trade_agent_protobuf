@@ -162,3 +162,18 @@ message VolumeRankMessage {
     int64 ask_orders       = 26;
     int64 ask_volumes      = 27;
 }
+
+message StockResponse {
+    int64 result       = 1;
+    StockMessage stock = 2;
+}
+
+message StockMessage {
+    string exchange    = 1;
+    string category    = 2;
+    string code        = 3;
+    string name        = 4;
+    double reference   = 5;
+    string update_date = 6;
+    string day_trade   = 7;
+}
