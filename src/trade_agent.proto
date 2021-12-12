@@ -50,6 +50,22 @@ message HistoryTickMessage {
     int64 tick_type  = 8;
 }
 
+message KbarResponse {
+    string stock_num          = 1;
+    string start_date         = 2;
+    string end_date           = 3;
+    repeated KbarMessage data = 4;
+}
+
+message KbarMessage {
+    int64 ts     = 1;
+    double Close = 2;
+    double Open  = 3;
+    double High  = 4;
+    double Low   = 5;
+    int64 Volume = 6;
+}
+
 message BidAskResponse {
     string exchange       = 1;
     BidAskMessage bid_ask = 2;
@@ -66,19 +82,6 @@ message BidAskMessage {
     repeated int64 diff_ask_vol = 8;
     int64 suspend               = 9;
     int64 simtrade              = 10;
-}
-
-message KbarResponse {
-    repeated KbarMessage data = 1;
-}
-
-message KbarMessage {
-    int64 ts     = 1;
-    double Close = 2;
-    double Open  = 3;
-    double High  = 4;
-    double Low   = 5;
-    int64 Volume = 6;
 }
 
 message SnapshotResponse {
