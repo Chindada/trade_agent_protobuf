@@ -2,7 +2,7 @@ syntax = "proto3";
 
 package trade_agent_protobuf;
 
-option go_package = "pkg/sinopacapi";
+option go_package = "pkg/pb";
 
 message StockResponse {
     repeated StockMessage stock = 1;
