@@ -34,7 +34,9 @@ message RealTimeTickMessage {
 }
 
 message HistoryTickResponse {
-    repeated HistoryTickMessage data = 1;
+    string stock_num                 = 1;
+    string date                      = 2;
+    repeated HistoryTickMessage data = 3;
 }
 
 message HistoryTickMessage {
