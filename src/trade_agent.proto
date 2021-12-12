@@ -66,12 +66,12 @@ message KbarMessage {
     int64 Volume = 6;
 }
 
-message BidAskResponse {
-    string exchange       = 1;
-    BidAskMessage bid_ask = 2;
+message RealTimeBidAskResponse {
+    string exchange               = 1;
+    RealTimeBidAskMessage bid_ask = 2;
 }
 
-message BidAskMessage {
+message RealTimeBidAskMessage {
     string code                 = 1;
     string date_time            = 2;
     repeated double bid_price   = 3;
