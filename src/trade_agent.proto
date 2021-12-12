@@ -92,7 +92,9 @@ message LastCountMessage {
 }
 
 message VolumeRankResponse {
-    repeated VolumeRankMessage data = 1;
+    int64 count                     = 1;
+    string date                     = 2;
+    repeated VolumeRankMessage data = 3;
 }
 
 message VolumeRankMessage {
