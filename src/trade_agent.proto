@@ -91,6 +91,54 @@ message LastCountMessage {
     double close = 4;
 }
 
+message VolumeRankResponse {
+    repeated VolumeRankMessage data = 1;
+}
+
+message VolumeRankMessage {
+    string date            = 1;
+    string code            = 2;
+    string name            = 3;
+    int64 ts               = 4;
+    double open            = 5;
+    double high            = 6;
+    double low             = 7;
+    double close           = 8;
+    double price_range     = 9;
+    int64 tick_type        = 10;
+    double change_price    = 11;
+    int64 change_type      = 12;
+    double average_price   = 13;
+    int64 volume           = 14;
+    int64 total_volume     = 15;
+    int64 amount           = 16;
+    int64 total_amount     = 17;
+    int64 yesterday_volume = 18;
+    double volume_ratio    = 19;
+    double buy_price       = 20;
+    int64 buy_volume       = 21;
+    double sell_price      = 22;
+    int64 sell_volume      = 23;
+    int64 bid_orders       = 24;
+    int64 bid_volumes      = 25;
+    int64 ask_orders       = 26;
+    int64 ask_volumes      = 27;
+}
+
+message OrderStatusHistoryResponse {
+    repeated OrderStatusHistoryMessage data = 1;
+}
+
+message OrderStatusHistoryMessage {
+    string status     = 1;
+    string code       = 2;
+    string action     = 3;
+    double price      = 4;
+    int64 quantity    = 5;
+    string order_id   = 6;
+    string order_time = 7;
+}
+
 message RealTimeTickResponse {
     string exchange          = 1;
     RealTimeTickMessage tick = 2;
@@ -157,38 +205,4 @@ message TradeRecordMessage {
     string id         = 5;
     string order_time = 6;
     string status     = 7;
-}
-
-message VolumeRankResponse {
-    repeated VolumeRankMessage data = 1;
-}
-
-message VolumeRankMessage {
-    string date            = 1;
-    string code            = 2;
-    string name            = 3;
-    int64 ts               = 4;
-    double open            = 5;
-    double high            = 6;
-    double low             = 7;
-    double close           = 8;
-    double price_range     = 9;
-    int64 tick_type        = 10;
-    double change_price    = 11;
-    int64 change_type      = 12;
-    double average_price   = 13;
-    int64 volume           = 14;
-    int64 total_volume     = 15;
-    int64 amount           = 16;
-    int64 total_amount     = 17;
-    int64 yesterday_volume = 18;
-    double volume_ratio    = 19;
-    double buy_price       = 20;
-    int64 buy_volume       = 21;
-    double sell_price      = 22;
-    int64 sell_volume      = 23;
-    int64 bid_orders       = 24;
-    int64 bid_volumes      = 25;
-    int64 ask_orders       = 26;
-    int64 ask_volumes      = 27;
 }
