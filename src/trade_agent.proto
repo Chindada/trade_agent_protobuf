@@ -164,8 +164,7 @@ message VolumeRankMessage {
 }
 
 message StockResponse {
-    int64 result                = 1;
-    repeated StockMessage stock = 2;
+    repeated StockMessage stock = 1;
 }
 
 message StockMessage {
