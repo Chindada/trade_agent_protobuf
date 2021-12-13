@@ -194,17 +194,3 @@ message EventResponse {
     string info      = 3;
     string event     = 4;
 }
-
-message TradeRecordResponse {
-    repeated TradeRecordMessage data = 1;
-}
-
-message TradeRecordMessage {
-    int64 quantity    = 1;
-    double price      = 2;
-    string action     = 3;
-    string code       = 4;
-    string id         = 5;
-    string order_time = 6;
-    string status     = 7;
-}
