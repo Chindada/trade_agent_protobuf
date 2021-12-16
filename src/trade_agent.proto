@@ -87,8 +87,7 @@ message LastCountResponse {
 message LastCountMessage {
     string date  = 1;
     string code  = 2;
-    int64 time   = 3;
-    double close = 4;
+    double close = 3;
 }
 
 message VolumeRankResponse {
