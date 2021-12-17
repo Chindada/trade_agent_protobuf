@@ -4,11 +4,11 @@ package trade_agent_protobuf;
 
 option go_package = "pkg/pb";
 
-message StockResponse {
-    repeated StockMessage stock = 1;
+message StockDetailResponse {
+    repeated StockDetailMessage stock = 1;
 }
 
-message StockMessage {
+message StockDetailMessage {
     string exchange    = 1;
     string category    = 2;
     string code        = 3;
@@ -64,14 +64,14 @@ message HistoryTickMessage {
     int64 tick_type  = 8;
 }
 
-message KbarResponse {
-    string stock_num          = 1;
-    string start_date         = 2;
-    string end_date           = 3;
-    repeated KbarMessage data = 4;
+message HistoryKbarResponse {
+    string stock_num                 = 1;
+    string start_date                = 2;
+    string end_date                  = 3;
+    repeated HistoryKbarMessage data = 4;
 }
 
-message KbarMessage {
+message HistoryKbarMessage {
     int64 ts     = 1;
     double Close = 2;
     double Open  = 3;
@@ -80,11 +80,11 @@ message KbarMessage {
     int64 Volume = 6;
 }
 
-message LastCountResponse {
-    repeated LastCountMessage data = 1;
+message HistoryCloseResponse {
+    repeated HistoryCloseMessage data = 1;
 }
 
-message LastCountMessage {
+message HistoryCloseMessage {
     string date  = 1;
     string code  = 2;
     double close = 3;
